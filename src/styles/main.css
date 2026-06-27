@@ -1726,6 +1726,7 @@ select {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   gap: var(--space-md);
   margin-top: var(--space-sm);
@@ -4126,6 +4127,7 @@ select {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
+    overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch;
     gap: var(--space-sm);
     padding-bottom: var(--space-sm);
@@ -4135,6 +4137,8 @@ select {
     padding-right: var(--space-md);
     scrollbar-width: none;
     justify-content: flex-start;
+    align-items: stretch;
+    max-height: none;
   }
 
   .philosophy-cards-grid::-webkit-scrollbar {
