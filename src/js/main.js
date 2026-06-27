@@ -313,7 +313,7 @@ function initTattooAnimation() {
     createSplat(width, 16);
 
     // Random timing interval representing the hand precision
-    const interval = Math.random() * 80 + 90; // 90ms - 170ms per char
+    const interval = Math.random() * 40 + 40; // 40ms - 80ms per char
     setTimeout(tattooStep, interval);
   }
 

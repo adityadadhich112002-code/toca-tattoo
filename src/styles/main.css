@@ -1574,7 +1574,8 @@ select {
 
 /* Reconstruction Dossier centered content */
 .reconstruction-dossier-wrapper {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: var(--space-lg);
 }
 
@@ -1588,6 +1589,9 @@ select {
   margin-top: 0;
   max-width: 800px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .logbook-stamp {
@@ -1727,6 +1731,7 @@ select {
   margin-top: var(--space-sm);
   scrollbar-width: none;
   padding-bottom: var(--space-sm);
+  justify-content: center;
 }
 
 .philosophy-cards-grid::-webkit-scrollbar {
@@ -4129,6 +4134,7 @@ select {
     padding-left: var(--space-md);
     padding-right: var(--space-md);
     scrollbar-width: none;
+    justify-content: flex-start;
   }
 
   .philosophy-cards-grid::-webkit-scrollbar {
