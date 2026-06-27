@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Best Practices -->
+  <title>Tattoo Artist Designer - Black and Gray Specialist - Felipe Santos</title>
+  <meta name="description"
+    content="Book an appointment with our ink master and transform your inspiration into a personalized masterpiece! Specialist in black & grey cover-ups and large-scale sleeve transformations in Dublin.">
+  <meta name="keywords"
+    content="Felipe Santos, Toca Tattoo, Felipe Tattoo, Black and Grey Realism, Coverups, Dublin Tattoo Artist, 3D Sleeve design, Felipe Santos Dublin">
+
+  <!-- Favicon using the logo -->
+  <link rel="icon" type="image/png" href="./logo.png">
+
+  <!-- Fonts loaded async — non-blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=La+Belle+Aurore&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=La+Belle+Aurore&display=swap" media="print" onload="this.media='all'">
+
+  <!-- Critical inline preloader CSS — renders instantly, no FOUC -->
+  <style>
+    html.loading, body.loading { overflow: hidden !important; }
+    .preloader {
+      position: fixed; inset: 0;
+      background: #0c0b0a;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 99999;
+    }
+    .preloader-logo {
+      width: 160px; height: 160px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .preloader-logo-img { width: 100%; height: 100%; object-fit: contain; }
+    .loader-bar {
+      width: 160px; height: 2px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 1px; overflow: hidden;
+      margin-top: 20px;
+    }
+    .loader-bar-progress { width: 0%; height: 100%; background: #fff; }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- Tactile Paper Noise Background Overlay -->
+  <div class="noise-overlay" id="noise-overlay"></div>
+
+  <!-- Ambient Background Glow Orbs -->
+  <div class="bg-orbs-container">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+  </div>
+
+  <!-- Screen Pre-loader (Logo Only) -->
+  <div id="screen-loader" class="preloader">
+    <div class="preloader-logo" id="preloader-logo">
+      <img src="./logo.png" alt="Felipe Santos Logo" class="preloader-logo-img" />
+    </div>
+    <div class="loader-bar">
+      <div class="loader-bar-progress" id="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Glassmorphic Header & Nav -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#" class="logo-badge" aria-label="Felipe Santos Home">
+        <div class="logo-img-wrap">
+          <img src="./logo.png" alt="Felipe Santos Logo" class="logo-img" />
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#meet-felipe">Felipe</a></li>
+          <li><a href="#transformations">Before & After</a></li>
+          <li><a href="#3d-concepts">3D Concepts</a></li>
+          <li><a href="#experience">Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#booking" class="btn btn-founder-glass" id="header-cta">Book Consultation</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header> <!-- Section 1: Hero Section (Luxury Industrial Split Layout) -->
+  <section class="hero-split-layout" id="hero">
+    <!-- Technical annotated ruler at the top border -->
+    <div class="tech-ruler-top">
+      <span>00.00 IN</span>
+      <span>08.00</span>
+      <span>16.00 SEC</span>
+      <span>24.00</span>
+      <span>32.00 MET</span>
+      <span>40.00</span>
+      <span>48.00 CC</span>
+      <span>56.00</span>
+      <span>64.00 RES</span>
+      <span>72.00</span>
+      <span>80.00 PORT</span>
+    </div>
+
+    <div class="hero-split-container">
+      <!-- Left Column: Branding, Badges & Consultation Form -->
+      <div class="hero-split-left">
+        <div class="hero-brand-intro">
+          <span class="hero-subtitle">APPOINTMENT ONLY • DUBLIN</span>
+          <h1 class="hero-title"
+            style="margin-bottom: 8px; font-size: clamp(2rem, 1.8rem + 4vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em;">
+            <span class="glassy-shiny-text">Tattoo Regret?</span>
+            <span class="tattoo-text-container" id="tattoo-text-container"
+              style="font-family: 'La Belle Aurore', cursive; color: #ffffff; text-transform: none; font-weight: normal; display: block; position: relative; cursor: pointer; letter-spacing: 1px; white-space: nowrap;">
+              <span id="tattoo-text-target"></span>
+            </span>
+          </h1>
+          <p class="hero-subheadline"
+            style="font-size: var(--text-base); margin-bottom: var(--space-md); color: rgba(255, 255, 255, 0.7);">
+            Specialist in black & grey cover-ups and large-scale sleeve transformations.
+          </p>
+        </div>
+
+        <!-- Consultation Form Wizard Card (Tattoo Artifact) -->
+        <div class="booking-form-card machined-steel-plate" id="booking"
+          style="margin: var(--space-md) 0 0 0; max-width: 100%;">
+          <div class="rivet-bottom-left"></div>
+          <div class="rivet-bottom-right"></div>
+          <!-- Step Indicators -->
+          <div class="step-indicators">
+            <div class="step-indicator-bar" id="step-progress-bar"></div>
+            <div class="step-dot active" data-step="1">1</div>
+            <div class="step-dot" data-step="2">2</div>
+            <div class="step-dot" data-step="3">3</div>
+            <div class="step-dot" data-step="4">4</div>
+          </div>
+
+          <form id="consultation-wizard" novalidate>
+
+            <!-- STEP 1: Basic Info & Project Idea -->
+            <div class="form-step active" data-step="1">
+              <h3 class="serif-display"
+                style="font-size: var(--text-lg); margin-bottom: var(--space-sm); text-align: center; color: var(--color-ink);">
+                1. The Concept</h3>
+
+              <div class="form-group-grid">
+                <div class="form-group">
+                  <label for="client-name">Name *</label>
+                  <input type="text" id="client-name" class="form-input" placeholder="e.g. James O'Brien" required>
+                </div>
+                <div class="form-group">
+                  <label for="client-phone">Phone Number *</label>
+                  <input type="tel" id="client-phone" class="form-input" placeholder="+353 83 123 4567" required>
+                </div>
+                <div class="form-group">
+                  <label for="client-email">Email *</label>
+                  <input type="email" id="client-email" class="form-input" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="tattoo-style">Tattoo Style *</label>
+                  <select id="tattoo-style" class="form-input" style="background: #111; color: var(--color-ink);"
+                    required>
+                    <option value="" disabled selected>Select style</option>
+                    <option value="cover-ups">Cover-Ups & Rebuilds</option>
+                    <option value="realism">Black & Grey Realism</option>
+                    <option value="large-scale">Large Scale Sleeves</option>
+                    <option value="custom-pieces">Custom Designs</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="project-desc">Tell Us Your Story *</label>
+                  <textarea id="project-desc" class="form-input" rows="3"
+                    placeholder="Explain your cover-up concept or project ideas, including details of any existing tattoos you'd like Felipe to rebuild..."
+                    required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2: Placement & Size Selection -->
+            <div class="form-step" data-step="2">
+              <h3 class="serif-display"
+                style="font-size: var(--text-lg); margin-bottom: var(--space-sm); text-align: center; color: var(--color-ink);">
+                2. Anatomical Alignment</h3>
+
+              <div class="body-map-container" style="gap: var(--space-sm);">
+                <!-- Inline SVG minimalist front/back outline body map -->
+                <div>
+                  <svg viewBox="0 0 200 400" class="body-map-svg" id="body-silhouette-svg" style="max-height: 180px;">
+                    <!-- Head -->
+                    <circle cx="100" cy="40" r="16" class="body-node" data-placement="head-neck" />
+                    <!-- Torso -->
+                    <path d="M 75 75 L 125 75 L 130 170 L 70 170 Z" class="body-node" data-placement="chest-torso" />
+                    <!-- Left Arm -->
+                    <path d="M 68 75 L 50 160 L 42 220 L 52 220 L 60 160 L 70 90 Z" class="body-node"
+                      data-placement="left-arm" />
+                    <!-- Right Arm -->
+                    <path d="M 132 75 L 150 160 L 158 220 L 148 220 L 140 160 L 130 90 Z" class="body-node"
+                      data-placement="right-arm" />
+                    <!-- Left Leg -->
+                    <path d="M 72 175 L 85 280 L 80 370 L 68 370 L 70 280 L 70 175 Z" class="body-node"
+                      data-placement="left-leg" />
+                    <!-- Right Leg -->
+                    <path d="M 128 175 L 115 280 L 120 370 L 132 370 L 130 280 L 130 175 Z" class="body-node"
+                      data-placement="right-leg" />
+                  </svg>
+                </div>
+
+                <div>
+                  <div class="form-group">
+                    <label style="font-size: 11px;">Tattoo Placement: <span id="selected-placement-label"
+                        class="slider-val" style="color: var(--color-taupe);">None</span></label>
+                    <input type="hidden" id="placement-input" required>
+                  </div>
+
+                  <div class="slider-group">
+                    <div style="display: flex; justify-content: space-between;">
+                      <label style="font-size: 11px;">Estimated Size (cm)</label>
+                      <span class="slider-val"><span id="size-val">10</span> cm</span>
+                    </div>
+                    <input type="range" min="3" max="40" value="10" class="range-slider" id="size-slider">
+                  </div>
+
+                  <div class="form-group" style="margin-top: var(--space-xs);">
+                    <label for="client-budget" style="font-size: 11px;">Estimated Budget *</label>
+                    <select id="client-budget" class="form-input" style="background: #111; color: var(--color-ink);"
+                      required>
+                      <option value="" disabled selected>Select budget range</option>
+                      <option value="150-300">€150 - €300</option>
+                      <option value="300-600">€300 - €600</option>
+                      <option value="600-1200">€600 - €1,200</option>
+                      <option value="1200+">€1,200+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: Reference Upload & Consultation Schedule -->
+            <div class="form-step" data-step="3">
+              <h3 class="serif-display"
+                style="font-size: var(--text-lg); margin-bottom: var(--space-sm); text-align: center; color: var(--color-ink);">
+                3. Schedule & Reference</h3>
+
+              <div class="form-group-grid">
+                <!-- Drag and drop zone -->
+                <div class="form-group">
+                  <label style="font-size: 11px;">Reference Images (Optional)</label>
+                  <div class="dropzone" id="upload-dropzone" style="padding: var(--space-sm); min-height: 100px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="1.5">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                    <p style="font-size: 9px; margin-top: 5px;">Drag files here or click (PNG/JPEG)</p>
+                    <input type="file" id="file-input" style="display: none;" multiple>
+                    <div id="file-list" style="margin-top: 5px; font-size: 9px; color: var(--color-brass);"></div>
+                  </div>
+                </div>
+
+                <!-- Calendar selection -->
+                <div class="form-group">
+                  <label style="font-size: 11px;">Select Date *</label>
+                  <div class="calendar-grid" id="booking-calendar" style="gap: 2px;">
+                    <div class="calendar-day-label">M</div>
+                    <div class="calendar-day-label">T</div>
+                    <div class="calendar-day-label">W</div>
+                    <div class="calendar-day-label">T</div>
+                    <div class="calendar-day-label">F</div>
+                    <div class="calendar-day-label">S</div>
+                    <div class="calendar-day-label">S</div>
+                  </div>
+                  <input type="hidden" id="date-input" required>
+
+                  <div class="time-slots" id="time-slots-container" style="margin-top: 8px; gap: 4px;">
+                    <div class="time-slot" data-slot="10:00 AM" style="padding: 4px; font-size: 9px;">10 AM</div>
+                    <div class="time-slot" data-slot="2:00 PM" style="padding: 4px; font-size: 9px;">2 PM</div>
+                    <div class="time-slot" data-slot="5:00 PM" style="padding: 4px; font-size: 9px;">5 PM</div>
+                  </div>
+                  <input type="hidden" id="time-input" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 4: Deposit Collections -->
+            <div class="form-step" data-step="4">
+              <h3 class="serif-display"
+                style="font-size: var(--text-lg); margin-bottom: var(--space-sm); text-align: center; color: var(--color-ink);">
+                4. Deposit</h3>
+
+              <div style="max-width: 100%;">
+                <p class="rhett-bio"
+                  style="text-align: center; font-size: 10px; margin-bottom: var(--space-sm); color: rgba(255, 255, 255, 0.7); line-height: 1.4;">
+                  Consultation deposit secures dedicated artist time and is adjusted against your final tattoo session,
+                  or refunded on consultation day.
+                </p>
+
+                <div class="checkout-details-box" style="padding: var(--space-sm); margin-bottom: var(--space-sm);">
+                  <div class="checkout-row" style="font-size: 11px;">
+                    <span>Consultation Deposit</span>
+                    <span>€20.00</span>
+                  </div>
+                  <div class="checkout-row total" style="font-size: 12px; margin-top: 4px;">
+                    <span>Total Deposit</span>
+                    <span>€20.00</span>
+                  </div>
+                </div>
+
+                <!-- Stripe Mock Field -->
+                <div class="form-group">
+                  <label for="stripe-element" style="font-size: 10px;">Credit or Debit Card</label>
+                  <div class="stripe-mock-input" style="padding: 6px 12px;">
+                    <input type="text" id="stripe-card-number" placeholder="4242 4242 4242 4242"
+                      style="font-size: 11px;">
+                    <input type="text" id="stripe-card-expiry" placeholder="MM/YY"
+                      style="max-width: 45px; text-align: center; font-size: 11px;">
+                    <input type="text" id="stripe-card-cvc" placeholder="CVC"
+                      style="max-width: 35px; text-align: center; font-size: 11px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wizard Nav Buttons -->
+            <div class="booking-nav-buttons" style="margin-top: var(--space-md);">
+              <button type="button" class="btn btn-dark" id="wizard-prev-btn"
+                style="visibility: hidden; padding: 8px 16px; font-size: 10px;">Back</button>
+              <button type="button" class="btn btn-primary" id="wizard-next-btn"
+                style="padding: 8px 16px; font-size: 10px;">Next Step</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Column: Workshop Table Visual Scene -->
+      <div class="hero-split-right">
+        <div class="workshop-table-scene">
+          <div class="workshop-spotlight"></div>
+
+          <div class="workshop-wall">
+            <!-- Huge outline logo watermark rotated behind the objects -->
+            <svg viewBox="0 0 160 160" width="300" height="300" xmlns="http://www.w3.org/2000/svg"
+              style="position: absolute; top: 10%; left: 10%; fill: none; stroke: rgba(255, 255, 255, 0.02); stroke-width: 1.5; pointer-events: none;">
+              <g transform="translate(30, 64) scale(0.33)">
+                <path d="M15,10 L60,10 L60,35 L40,35 L40,45 L60,45 L60,70 L15,70 L15,45 L35,45 L35,35 L15,35 Z" />
+                <path d="M75,0 L95,0 L95,30 L125,30 L125,70 L105,70 L105,50 L95,50 L95,70 L75,70 Z" />
+                <rect x="135" y="25" width="20" height="45" />
+                <path d="M145,5 L155,12 L145,19 L135,12 Z" />
+                <path d="M155,30 L215,30 L215,70 L195,70 L195,50 L175,50 L175,70 L155,70 Z" />
+                <path d="M225,0 L245,0 L245,35 L265,15 L285,15 L255,45 L285,70 L265,70 L245,45 L245,70 L225,70 Z" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- Rough Steel Table top -->
+          <div class="steel-table-top">
+
+            <!-- Sketchbook -->
+            <div class="workshop-artifact artifact-sketchbook">
+              <div class="sketchbook-pages">
+                <!-- Abstract outline drawing of a geometric tattoo -->
+                <svg viewBox="0 0 100 120" width="100%" height="100%"
+                  style="fill: none; stroke: #222; stroke-width: 0.8;">
+                  <circle cx="50" cy="50" r="28" />
+                  <path d="M50,10 L50,90 M10,50 L90,50 M30,30 L70,70 M70,30 L30,70" stroke-dasharray="2 2" />
+                  <polygon points="50,22 78,50 50,78 22,50" />
+                  <text x="32" y="112" font-family="var(--font-handwritten)" font-size="12" fill="#555"
+                    transform="rotate(-4)" stroke="none">Felipe</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Tattoo Machine -->
+            <div class="workshop-artifact artifact-tattoo-machine">
+              <svg viewBox="0 0 80 80" width="100%" height="100%" style="stroke: var(--color-ink); stroke-width: 1.2;">
+                <!-- Minimal linear mechanical tattoo gun shape -->
+                <path d="M 20 20 L 20 60 L 25 60 L 25 20 Z" fill="#222" />
+                <rect x="25" y="28" width="12" height="22" stroke-width="1" />
+                <circle cx="31" cy="39" r="3" />
+                <path d="M 20 25 L 5 40 L 5 45 L 20 30" fill="rgba(255,255,255,0.05)" />
+                <line x1="22" y1="60" x2="22" y2="78" stroke-width="2" />
+                <line x1="22" y1="78" x2="22" y2="80" stroke="var(--color-taupe)" stroke-width="1.5" />
+              </svg>
+            </div>
+
+            <!-- Ink Bottle -->
+            <div class="workshop-artifact artifact-ink-bottle">
+              <div class="ink-liquid"></div>
+            </div>
+
+            <!-- Metal ruler -->
+            <div class="workshop-artifact artifact-metal-ruler">
+              <div class="ruler-ticks"
+                style="width: 100%; height: 100%; background: repeating-linear-gradient(to right, #222, #222 1px, transparent 1px, transparent 8px); opacity: 0.5;">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Philosophy (Story - Tattoo Reconstruction Dossier) -->
+  <section class="section-padding philosophy-section" id="philosophy">
+    <div class="container">
+      <div class="reconstruction-dossier-wrapper">
+
+
+        <!-- The Logbook / Clinical Dossier File Folder -->
+        <div class="dossier-logbook-folder" style="margin-top: 0;">
+          <div class="logbook-card-inner">
+            <span class="section-label" style="text-align: center;">FELIPE SANTOS // TATTOO CLINIC RECORD</span>
+            <h2 class="rhett-story-title"
+              style="text-align: center; margin-bottom: var(--space-xs); font-size: clamp(1.8rem, 1.5rem + 3vw, 3rem);">
+              Rebuilding &<br>Camouflaging.</h2>
+
+            <div class="logbook-stamp">
+              <svg viewBox="0 0 100 100" width="80" height="80">
+                <circle cx="50" cy="50" r="42" fill="none" stroke="var(--color-brass)" stroke-width="2"
+                  stroke-dasharray="4 2" />
+                <text x="50%" y="45%" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold"
+                  fill="var(--color-brass)">APPROVED</text>
+                <text x="50%" y="60%" text-anchor="middle" font-family="monospace" font-size="8"
+                  fill="rgba(197, 168, 128, 0.7)">FLOW ALIGN</text>
+                <path d="M25 50 L75 50" stroke="var(--color-brass)" stroke-width="1" />
+              </svg>
+            </div>
+
+            <div class="logbook-typewriter-content"
+              style="margin-top: var(--space-md); margin-bottom: var(--space-md);">
+              <div class="logbook-notes" style="font-size: var(--text-base); text-align: center; gap: var(--space-xs);">
+                <p>Most artists think about hiding a past regret.</p>
+                <p class="philosophy-highlight"
+                  style="font-size: var(--text-lg); border: none; padding: 0; margin: 4px 0;">I think about rebuilding
+                  it completely.</p>
+                <p style="color: var(--color-taupe); font-weight: 500;">Redesigning the entire flow around your natural
+                  anatomy.</p>
+              </div>
+            </div>
+
+            <!-- Copper Tag Plate quote box -->
+            <div class="copper-plate-tag">
+              <div class="tag-screw top-left"></div>
+              <div class="tag-screw top-right"></div>
+              <div class="tag-screw bottom-left"></div>
+              <div class="tag-screw bottom-right"></div>
+
+              <span class="copper-plate-label">PRINCIPLE STATEMENT</span>
+              <p class="copper-plate-text">Transforming past regrets into proud art.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Spec Cards Grid at bottom of section -->
+      <div class="philosophy-cards-grid">
+        <!-- Card 1 -->
+        <div class="philosophy-card animate-card" data-delay="0">
+          <div class="philosophy-card-inner">
+            <span class="philosophy-card-num">01</span>
+            <h3 class="philosophy-card-title">Strategic Cover-Up</h3>
+            <p class="philosophy-card-desc">Camouflaging old lines within high-contrast shading patterns.</p>
+            <p class="philosophy-card-tagline">Never blackout. Only flow.</p>
+            <div class="philosophy-card-line"></div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="philosophy-card animate-card" data-delay="1">
+          <div class="philosophy-card-inner">
+            <span class="philosophy-card-num">02</span>
+            <h3 class="philosophy-card-title">Anatomical Alignment</h3>
+            <p class="philosophy-card-desc">Designing around the natural movement and contour shapes of muscle groups.
+            </p>
+            <div class="philosophy-card-line"></div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="philosophy-card animate-card" data-delay="2">
+          <div class="philosophy-card-inner">
+            <span class="philosophy-card-num">03</span>
+            <h3 class="philosophy-card-title">3D Concept Design</h3>
+            <p class="philosophy-card-desc">Visualizing structural balance and depth in virtual space before applying
+              ink.</p>
+            <div class="philosophy-card-line"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Section 3: Meet Felipe (The Craft) -->
+  <section class="section-padding" id="meet-felipe"
+    style="background-color: var(--color-sand); border-top: 1px solid var(--color-border); position: relative; overflow: hidden;">
+    <!-- Abstract ruler watermark artifact -->
+    <div class="tech-ruler-left"
+      style="position: absolute; top: var(--space-xl); left: 10px; height: 300px; width: 20px; border-right: 1px solid rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; font-family: monospace; font-size: 8px; color: rgba(255,255,255,0.03); pointer-events: none;">
+      <span>00.00</span><span>10.00</span><span>20.00</span><span>30.00</span>
+    </div>
+
+    <div class="container">
+      <div class="rhett-grid">
+        <span class="section-label rhett-mobile-label">
+          <svg class="heading-icon" viewBox="0 0 100 100" width="12" height="12" fill="currentColor"
+            style="vertical-align: middle; display: inline-block; margin: 0 6px; transform: rotate(-15deg);">
+            <rect x="23" y="38" width="50" height="5" />
+            <rect x="20" y="32" width="4" height="18" />
+            <rect x="16" y="39" width="12" height="4" />
+            <rect x="35" y="27" width="10" height="11" />
+            <rect x="38" y="12" width="4" height="15" />
+            <path fill-rule="evenodd" d="M40 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+            <rect x="44" y="10" width="30" height="5" />
+            <rect x="55" y="15" width="4" height="6" />
+            <rect x="65" y="15" width="4" height="6" />
+            <rect x="52" y="21" width="21" height="22" />
+            <rect x="33" y="49" width="14" height="17" />
+            <polygon points="35,71 45,71 43,80 37,80" />
+            <rect x="38.5" y="80" width="3" height="11" />
+          </svg>
+          Master Craftsman
+          <svg class="heading-icon" viewBox="0 0 100 100" width="12" height="12" fill="currentColor"
+            style="vertical-align: middle; display: inline-block; margin: 0 6px; transform: rotate(15deg) scaleX(-1);">
+            <rect x="23" y="38" width="50" height="5" />
+            <rect x="20" y="32" width="4" height="18" />
+            <rect x="16" y="39" width="12" height="4" />
+            <rect x="35" y="27" width="10" height="11" />
+            <rect x="38" y="12" width="4" height="15" />
+            <path fill-rule="evenodd" d="M40 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+            <rect x="44" y="10" width="30" height="5" />
+            <rect x="55" y="15" width="4" height="6" />
+            <rect x="65" y="15" width="4" height="6" />
+            <rect x="52" y="21" width="21" height="22" />
+            <rect x="33" y="49" width="14" height="17" />
+            <polygon points="35,71 45,71 43,80 37,80" />
+            <rect x="38.5" y="80" width="3" height="11" />
+          </svg>
+        </span>
+        <div class="rhett-image-container rhett-img-col" style="
+            background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.07));
+            border-top: 1.5px solid rgba(255,255,255,0.45);
+            border-left: 1.5px solid rgba(255,255,255,0.3);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            box-shadow:
+              inset 0 1px 0 rgba(255,255,255,0.5),
+              inset 0 8px 20px -8px rgba(255,255,255,0.35),
+              inset 0 0 15px rgba(0,0,0,0.4),
+              0 0 0 1px rgba(255,255,255,0.06),
+              0 20px 50px rgba(0,0,0,0.6),
+              0 0 40px rgba(255,255,255,0.04);
+            padding: 8px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            overflow: hidden;
+          ">
+          <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Foto-pessoal-1-scaled.jpeg"
+            alt="Felipe Santos - Tattoo Artist" class="rhett-image"
+            style="object-fit: cover; object-position: center; border-radius: 10px;">
+          <!-- Studio Stamp Watermark Overlay -->
+          <div
+            style="position: absolute; bottom: 20px; right: 20px; width: 80px; height: 80px; border: 1.5px dashed var(--color-brass); border-radius: 50%; display: flex; align-items: center; justify-content: center; transform: rotate(-15deg); pointer-events: none; opacity: 0.6;">
+            <span
+              style="font-family: var(--font-sans); font-size: 8px; font-weight: 900; color: var(--color-brass); letter-spacing: 1px; text-align: center;">FELIPE<br>DUBLIN</span>
+          </div>
+        </div>
+        <div class="rhett-details rhett-text-col">
+          <span class="section-label rhett-desktop-label">
+            <svg class="heading-icon" viewBox="0 0 100 100" width="12" height="12" fill="currentColor"
+              style="vertical-align: middle; display: inline-block; margin: 0 6px; transform: rotate(-15deg);">
+              <rect x="23" y="38" width="50" height="5" />
+              <rect x="20" y="32" width="4" height="18" />
+              <rect x="16" y="39" width="12" height="4" />
+              <rect x="35" y="27" width="10" height="11" />
+              <rect x="38" y="12" width="4" height="15" />
+              <path fill-rule="evenodd" d="M40 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+              <rect x="44" y="10" width="30" height="5" />
+              <rect x="55" y="15" width="4" height="6" />
+              <rect x="65" y="15" width="4" height="6" />
+              <rect x="52" y="21" width="21" height="22" />
+              <rect x="33" y="49" width="14" height="17" />
+              <polygon points="35,71 45,71 43,80 37,80" />
+              <rect x="38.5" y="80" width="3" height="11" />
+            </svg>
+            Master Craftsman
+            <svg class="heading-icon" viewBox="0 0 100 100" width="12" height="12" fill="currentColor"
+              style="vertical-align: middle; display: inline-block; margin: 0 6px; transform: rotate(15deg) scaleX(-1);">
+              <rect x="23" y="38" width="50" height="5" />
+              <rect x="20" y="32" width="4" height="18" />
+              <rect x="16" y="39" width="12" height="4" />
+              <rect x="35" y="27" width="10" height="11" />
+              <rect x="38" y="12" width="4" height="15" />
+              <path fill-rule="evenodd" d="M40 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+              <rect x="44" y="10" width="30" height="5" />
+              <rect x="55" y="15" width="4" height="6" />
+              <rect x="65" y="15" width="4" height="6" />
+              <rect x="52" y="21" width="21" height="22" />
+              <rect x="33" y="49" width="14" height="17" />
+              <polygon points="35,71 45,71 43,80 37,80" />
+              <rect x="38.5" y="80" width="3" height="11" />
+            </svg>
+          </span>
+          <h2 class="rhett-story-title"
+            style="font-size: var(--text-xxl); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em;">
+            10+
+            Years.<br>One Obsession.</h2>
+          <p class="rhett-bio" style="color: rgba(255,255,255,0.85); font-weight: 500;">
+            For over a decade, Felipe has helped clients rebuild confidence and turn past mistakes into dark realism
+            masterpieces.
+          </p>
+          <p class="rhett-bio" style="color: rgba(255,255,255,0.7); font-size: var(--text-sm);">
+            Every design is custom made specifically around your anatomy to naturally camouflage old ink within smooth
+            shadows, ensuring it ages beautifully.
+          </p>
+
+          <div class="rhett-quote-box"
+            style="margin: var(--space-md) 0; border-left: 2px solid var(--color-brass); padding-left: var(--space-sm);">
+            <blockquote
+              style="font-family: var(--font-serif); font-size: var(--text-lg); font-style: italic; color: var(--color-taupe); line-height: 1.4; font-weight: normal;">
+              "Most artists think about hiding. I think about rebuilding. I redesign the entire flow of your arm."
+            </blockquote>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: var(--space-md); margin-top: var(--space-sm);">
+            <a href="#booking" class="btn btn-founder-glass" id="founder-cta-btn">Book Consultation</a>
+            <!-- Handwritten Signature Artifact -->
+            <span
+              style="font-family: var(--font-handwritten); font-size: 2.8rem; color: var(--color-taupe); display: inline-block; transform: rotate(-5deg); margin-left: 10px; pointer-events: none;">Felipe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Signature Work Portfolio (Filterable, Touch Carousel) -->
+  <!-- Section 4: Before & After Cover-Up Transformations -->
+  <section class="section-padding" id="transformations"
+    style="background-color: var(--color-sand); border-top: 1px solid var(--color-border); overflow: hidden;">
+    <div class="container">
+      <div class="portfolio-header" style="flex-direction: column; align-items: flex-start; gap: var(--space-md);">
+        <div style="max-width: 600px;">
+          <span class="section-label">Real Transformations</span>
+          <h2 class="rhett-story-title" style="margin-bottom: var(--space-xs);">Rebuilding Confidence.</h2>
+          <p class="rhett-bio" style="font-size: var(--text-sm); color: rgba(255, 255, 255, 0.7); line-height: 1.6;">
+            From dark mistakes to stunning black & grey masterpieces. Every transformation is engineered specifically
+            around your anatomy to completely camouflage the old ink.
+          </p>
+        </div>
+      </div>
+
+      <div class="transformations-grid">
+
+        <!-- Item 1 -->
+        <div class="transformation-card portfolio-item" data-category="cover-ups" data-id="1">
+          <div class="ba-split-container">
+            <div class="ba-image-wrapper before-wrapper">
+              <div class="ba-badge before">BEFORE</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente1Antes.png"
+                alt="Before Project 1">
+            </div>
+            <div class="ba-image-wrapper after-wrapper">
+              <div class="ba-badge after">AFTER</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente1Depois.png"
+                alt="After Project 1">
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4 class="transformation-title">The Guitar Metamorphosis</h4>
+            <p class="transformation-desc">Complete redesign and anatomical flow rebuild.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="transformation-card portfolio-item" data-category="cover-ups" data-id="2">
+          <div class="ba-split-container">
+            <div class="ba-image-wrapper before-wrapper">
+              <div class="ba-badge before">BEFORE</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente2Antes.png"
+                alt="Before Project 2">
+            </div>
+            <div class="ba-image-wrapper after-wrapper">
+              <div class="ba-badge after">AFTER</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente2Depois.png"
+                alt="After Project 2">
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4 class="transformation-title">The Lion Transition</h4>
+            <p class="transformation-desc">Bringing faded ink into deep dark realism.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="transformation-card portfolio-item" data-category="realism" data-id="3">
+          <div class="ba-split-container">
+            <div class="ba-image-wrapper before-wrapper">
+              <div class="ba-badge before">BEFORE</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente3antes.png"
+                alt="Before Project 3">
+            </div>
+            <div class="ba-image-wrapper after-wrapper">
+              <div class="ba-badge after">AFTER</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente3Depois.png"
+                alt="After Project 3">
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4 class="transformation-title">Cinematic Realism Upgrade</h4>
+            <p class="transformation-desc">Transforming a faded piece into a high-contrast masterpiece.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="transformation-card portfolio-item" data-category="cover-ups" data-id="4">
+          <div class="ba-split-container">
+            <div class="ba-image-wrapper before-wrapper">
+              <div class="ba-badge before">BEFORE</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente4Antes.png"
+                alt="Before Project 4">
+            </div>
+            <div class="ba-image-wrapper after-wrapper">
+              <div class="ba-badge after">AFTER</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente4Depois.png"
+                alt="After Project 4">
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4 class="transformation-title">The Pride Reborn</h4>
+            <p class="transformation-desc">Strategic shadowing to completely camouflage the old ink.</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="transformation-card portfolio-item" data-category="realism" data-id="5">
+          <div class="ba-split-container">
+            <div class="ba-image-wrapper before-wrapper">
+              <div class="ba-badge before">BEFORE</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente5Antes.png"
+                alt="Before Project 5">
+            </div>
+            <div class="ba-image-wrapper after-wrapper">
+              <div class="ba-badge after">AFTER</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente5Depois.png"
+                alt="After Project 5">
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4 class="transformation-title">The Timeless Legacy</h4>
+            <p class="transformation-desc">Using the body's natural shape to hide past regrets.</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="transformation-card portfolio-item" data-category="cover-ups" data-id="6">
+          <div class="ba-split-container">
+            <div class="ba-image-wrapper before-wrapper">
+              <div class="ba-badge before">BEFORE</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente6Antes.png"
+                alt="Before Project 6">
+            </div>
+            <div class="ba-image-wrapper after-wrapper">
+              <div class="ba-badge after">AFTER</div>
+              <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Cliente6Depois.png"
+                alt="After Project 6">
+            </div>
+          </div>
+          <div class="transformation-info">
+            <h4 class="transformation-title">Celtic Cross Revival</h4>
+            <p class="transformation-desc">From outdated linework to smooth, realistic shading.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Portfolio Detail Case Study Modal -->
+  <div class="modal" id="portfolio-modal">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close" aria-label="Close Case Study">&times;</button>
+      <div class="modal-media">
+        <img id="modal-img" src="" alt="Case Study Image">
+      </div>
+      <div class="modal-content">
+        <div>
+          <span class="modal-header-meta" id="modal-meta">Category</span>
+          <h3 class="modal-title" id="modal-title">Project Name</h3>
+          <div class="modal-body" id="modal-desc">
+            <!-- Loaded dynamically -->
+          </div>
+        </div>
+        <div class="modal-specs">
+          <div class="spec-item">
+            <label>Artist</label>
+            <span>Felipe Santos</span>
+          </div>
+          <div class="spec-item">
+            <label>Duration</label>
+            <span id="modal-duration">8 Hours</span>
+          </div>
+          <div class="spec-item">
+            <label>Healing Stage</label>
+            <span>Fully Healed</span>
+          </div>
+          <div class="spec-item">
+            <label>Design Style</label>
+            <span id="modal-style">Cover-Up / Realism</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: Tattoo Styles (Find Your Style) -->
+  <section class="section-padding craft-section-outer" id="styles"
+    style="background-color: var(--color-sand); border-top: 1px solid var(--color-border);">
+    <!-- Header stays padded inside container -->
+    <div class="container">
+      <div style="max-width: 600px; margin-bottom: var(--space-md);">
+        <span class="section-label">Felipe Santos Specializations</span>
+        <h2 class="rhett-story-title">Craft Areas.</h2>
+        <p class="rhett-bio" style="font-size: var(--text-sm); color: rgba(255, 255, 255, 0.7);">Every project is
+          designed around your unique anatomy. Choose the craft specialization that matches your goal.</p>
+      </div>
+    </div>
+
+    <!-- Carousel bleeds full-width on mobile (sits OUTSIDE .container) -->
+    <div class="craft-carousel-track" id="craft-carousel-track">
+      <!-- Card 1 -->
+      <div class="style-card concrete-card craft-snap-card">
+        <span class="style-card-num">01</span>
+        <h3 class="style-card-title">Cover-Ups</h3>
+        <p class="style-card-desc">Rebuilding.<br>Camouflaging.<br>Transforming.</p>
+        <div class="style-card-meta">
+          <span>[ MULTI-LAYER ]</span>
+          <span>&lt;--- CAMOUFLAGE ---&gt;</span>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="style-card concrete-card craft-snap-card">
+        <span class="style-card-num">02</span>
+        <h3 class="style-card-title">Black &amp; Grey</h3>
+        <p class="style-card-desc">High contrast.<br>Deep shadows.<br>Cinematic depth.</p>
+        <div class="style-card-meta">
+          <span>[ SHADING FLUID ]</span>
+          <span>&lt;--- HIGH CONTRAST ---&gt;</span>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="style-card concrete-card craft-snap-card">
+        <span class="style-card-num">03</span>
+        <h3 class="style-card-title">Realism</h3>
+        <p class="style-card-desc">Soft shading.<br>Anatomical flow.<br>Photorealistic details.</p>
+        <div class="style-card-meta">
+          <span>[ 3D GRADIENTS ]</span>
+          <span>&lt;--- 0.3mm NEEDLE ---&gt;</span>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="style-card concrete-card craft-snap-card">
+        <span class="style-card-num">04</span>
+        <h3 class="style-card-title">3D Concepts</h3>
+        <p class="style-card-desc">Visualizing volume and anatomical balance before inking.</p>
+        <div class="style-card-meta">
+          <span>[ MODEL VIEWER ]</span>
+          <span>&lt;--- SCALE 1.0 ---&gt;</span>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="style-card concrete-card craft-snap-card">
+        <span class="style-card-num">05</span>
+        <h3 class="style-card-title">Large Scale</h3>
+        <p class="style-card-desc" style="margin-bottom: var(--space-xs);">Complete sleeve and back transformations.</p>
+        <span class="style-card-badge">Never forced.</span>
+        <div class="style-card-meta">
+          <span>[ HARMONIOUS FLOW ]</span>
+          <span>&lt;--- sleeve &amp; back ---&gt;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile dot indicators -->
+    <div class="craft-dots" id="craft-dots" aria-label="Card navigation">
+      <button class="craft-dot active" data-index="0" aria-label="Card 1"></button>
+      <button class="craft-dot" data-index="1" aria-label="Card 2"></button>
+      <button class="craft-dot" data-index="2" aria-label="Card 3"></button>
+      <button class="craft-dot" data-index="3" aria-label="Card 4"></button>
+      <button class="craft-dot" data-index="4" aria-label="Card 5"></button>
+    </div>
+  </section>
+
+  <!-- Section 6: 3D Concepts Viewer (Anatomical Balance) -->
+  <section class="section-padding concepts-section" id="3d-concepts">
+    <!-- Model-viewer library script -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <div class="container">
+      <div style="max-width: 600px; margin-bottom: var(--space-md);">
+        <span class="section-label">Interactive 3D Art</span>
+        <h2 class="rhett-story-title">Anatomical Balance.</h2>
+        <p class="rhett-bio" style="font-size: var(--text-sm); color: rgba(255, 255, 255, 0.75);">
+          Scroll to interact with real large-scale concepts designed in 3D. We visualize flow, depth, and anatomical
+          balance across different body parts to ensure perfection before touching the skin.
+        </p>
+      </div>
+
+      <div class="concepts-grid">
+        <!-- Concept 1 -->
+        <div class="concept-card">
+          <div class="concept-viewer-wrapper">
+            <model-viewer class="concept-viewer" src="./caveiracostas.glb" camera-controls auto-rotate
+              shadow-intensity="1.8" shadow-softness="0.4" exposure="1.1" environment-image="neutral"
+              touch-action="pan-y" interaction-prompt="none" ar-status="not-presenting">
+            </model-viewer>
+            <div class="interaction-prompt">
+              <svg class="gesture-svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 10v10M12 14l-4 4 4 4M20 14l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M14.5 16.5V9.5a1.5 1.5 0 0 1 3 0v7M17.5 13.5a1.5 1.5 0 0 1 3 0M20.5 15.5a1.5 1.5 0 0 1 3 0M11.5 15.5v3.5a5 5 0 0 0 5 5h3a5 5 0 0 0 5-5v-1"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="interaction-prompt-text">Drag to Rotate 3D</span>
+            </div>
+          </div>
+          <div class="concept-info">
+            <span class="concept-num">CONCEPT 01</span>
+            <h4 class="concept-title">Dark Realism Backpiece</h4>
+            <p class="concept-desc">3D model visual mapping depth & contrast across the spinal contours.</p>
+          </div>
+        </div>
+
+        <!-- Concept 2 -->
+        <div class="concept-card">
+          <div class="concept-viewer-wrapper">
+            <model-viewer class="concept-viewer" src="./fechamentodebracoguerragrega.glb" camera-controls auto-rotate
+              shadow-intensity="1.8" shadow-softness="0.4" exposure="1.1" environment-image="neutral"
+              touch-action="pan-y" interaction-prompt="none" ar-status="not-presenting">
+            </model-viewer>
+            <div class="interaction-prompt">
+              <svg class="gesture-svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 10v10M12 14l-4 4 4 4M20 14l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M14.5 16.5V9.5a1.5 1.5 0 0 1 3 0v7M17.5 13.5a1.5 1.5 0 0 1 3 0M20.5 15.5a1.5 1.5 0 0 1 3 0M11.5 15.5v3.5a5 5 0 0 0 5 5h3a5 5 0 0 0 5-5v-1"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="interaction-prompt-text">Drag to Rotate 3D</span>
+            </div>
+          </div>
+          <div class="concept-info">
+            <span class="concept-num">CONCEPT 02</span>
+            <h4 class="concept-title">Greek War Full Sleeve</h4>
+            <p class="concept-desc">Anatomical mapping of a full arm transformation sleeve.</p>
+          </div>
+        </div>
+
+        <!-- Concept 3 -->
+        <div class="concept-card">
+          <div class="concept-viewer-wrapper">
+            <model-viewer class="concept-viewer" src="./fechamentopernaegipcio.glb" camera-controls auto-rotate
+              shadow-intensity="1.8" shadow-softness="0.4" exposure="1.1" environment-image="neutral"
+              touch-action="pan-y" interaction-prompt="none" ar-status="not-presenting">
+            </model-viewer>
+            <div class="interaction-prompt">
+              <svg class="gesture-svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 10v10M12 14l-4 4 4 4M20 14l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M14.5 16.5V9.5a1.5 1.5 0 0 1 3 0v7M17.5 13.5a1.5 1.5 0 0 1 3 0M20.5 15.5a1.5 1.5 0 0 1 3 0M11.5 15.5v3.5a5 5 0 0 0 5 5h3a5 5 0 0 0 5-5v-1"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="interaction-prompt-text">Drag to Rotate 3D</span>
+            </div>
+          </div>
+          <div class="concept-info">
+            <span class="concept-num">CONCEPT 03</span>
+            <h4 class="concept-title">Egyptian Leg Sleeve</h4>
+            <p class="concept-desc">Volume and depth study conforming to the lower body muscle groups.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: The Experience (Here's How It Works) -->
+  <section class="section-padding" id="experience"
+    style="background-color: var(--color-sand); border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto var(--space-md) auto; text-align: center;">
+        <span class="section-label">The Process</span>
+        <h2 class="rhett-story-title" style="margin-bottom: var(--space-xs);">Here's How It Works.</h2>
+        <p class="rhett-bio" style="font-size: var(--text-sm); color: rgba(255, 255, 255, 0.7); margin-bottom: 0;">A
+          premium
+          transformation deserves a structured process.</p>
+      </div>
+
+      <!-- Linear process flow layout -->
+      <div class="process-line-wrap" id="process-line-wrap">
+
+        <!-- Step 01 -->
+        <div class="process-line-step" id="p-step-1">
+          <div class="p-step-header">
+            <span class="process-line-num">01</span>
+            <span class="process-line-title">In-Person Consultation</span>
+          </div>
+          <p class="process-line-desc">We analyse your existing tattoo, skin tone, and anatomy before a single line is
+            drawn.</p>
+        </div>
+
+        <!-- Arrow 1-2 -->
+        <div class="process-line-arrow" id="p-arrow-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="process-line-step" id="p-step-2">
+          <div class="p-step-header">
+            <span class="process-line-num">02</span>
+            <span class="process-line-title">Strategic Design</span>
+          </div>
+          <p class="process-line-desc">A bespoke layout is engineered around your muscle contours and cover-up
+            requirements.</p>
+        </div>
+
+        <!-- Arrow 2-3 -->
+        <div class="process-line-arrow" id="p-arrow-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <!-- Step 03 -->
+        <div class="process-line-step" id="p-step-3">
+          <div class="p-step-header">
+            <span class="process-line-num">03</span>
+            <span class="process-line-title">3D Concept Dev</span>
+          </div>
+          <p class="process-line-desc">Digital 3D modelling maps depth, flow and balance across your body before any ink
+            touches skin.</p>
+        </div>
+
+        <!-- Arrow 3-4 -->
+        <div class="process-line-arrow" id="p-arrow-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <!-- Step 04 -->
+        <div class="process-line-step" id="p-step-4">
+          <div class="p-step-header">
+            <span class="process-line-num">04</span>
+            <span class="process-line-title">Realistic Shading</span>
+          </div>
+          <p class="process-line-desc">High-contrast black & grey gradients are applied with cinematic precision, layer
+            by layer.</p>
+        </div>
+
+        <!-- Arrow 4-5 -->
+        <div class="process-line-arrow" id="p-arrow-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <!-- Step 05 -->
+        <div class="process-line-step" id="p-step-5">
+          <div class="p-step-header">
+            <span class="process-line-num">05</span>
+            <span class="process-line-title">Multi-Layer Technique</span>
+          </div>
+          <p class="process-line-desc">Multiple sessions of refined shading build true photorealistic depth that ages
+            beautifully.</p>
+        </div>
+
+        <!-- Arrow 5-6 -->
+        <div class="process-line-arrow" id="p-arrow-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <!-- Step 06 -->
+        <div class="process-line-step" id="p-step-6">
+          <div class="p-step-header">
+            <span class="process-line-num">06</span>
+            <span class="process-line-title">Long-Term Aesthetic</span>
+          </div>
+          <p class="process-line-desc">Aftercare guidance and touch-up support ensure your transformation lasts a
+            lifetime.</p>
+        </div>
+
+      </div>
+
+      <!-- Section divider laser line -->
+      <div class="laser-line" style="margin-top: var(--space-xl);"></div>
+    </div>
+  </section>
+
+  <!-- Section 8: Cinematic Reels (Watch the Process) -->
+  <section class="section-padding video-showcase-section" id="reels">
+    <div class="container">
+      <div style="max-width: 600px; margin-bottom: var(--space-md);">
+        <span class="section-label">Cinematic Process</span>
+        <h2 class="rhett-story-title">Watch the Rebuilding.</h2>
+        <p class="rhett-bio" style="font-size: var(--text-sm); color: rgba(255, 255, 255, 0.75);">
+          Experience the details of high-contrast black & grey cover-ups and multi-layer shading techniques.
+        </p>
+      </div>
+
+      <div class="video-grid">
+        <!-- Video Card 1 -->
+        <div class="vf-video-wrapper" data-video-src="./reel_skull.mp4" onclick="loadFluidVideo(this)">
+          <div class="vf-cover-container">
+            <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Turn_this_image_202602221949.jpeg"
+              class="vf-cover" alt="Process Reel 1">
+            <div class="vf-play-button"></div>
+          </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="vf-video-wrapper" data-video-src="./reel1.mp4" onclick="loadFluidVideo(this)">
+          <div class="vf-cover-container">
+            <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Turn_this_image_202602221944.jpeg"
+              class="vf-cover" alt="Process Reel 2">
+            <div class="vf-play-button"></div>
+          </div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="vf-video-wrapper" data-video-src="./reel2.mp4" onclick="loadFluidVideo(this)">
+          <div class="vf-cover-container">
+            <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Turn_this_image_202602221947.jpeg"
+              class="vf-cover" alt="Process Reel 3">
+            <div class="vf-play-button"></div>
+          </div>
+        </div>
+
+        <!-- Video Card 4 -->
+        <div class="vf-video-wrapper" data-video-src="./reel3.mp4" onclick="loadFluidVideo(this)">
+          <div class="vf-cover-container">
+            <img src="https://felipetattooartist.com/wp-content/uploads/2026/02/Turn_this_image_202602221951.jpeg"
+              class="vf-cover" alt="Process Reel 4">
+            <div class="vf-play-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video loading script inline -->
+    <script>
+      function loadFluidVideo(wrapper) {
+        if (wrapper.classList.contains('loaded')) return;
+
+        // Remove currently active playing frames
+        document.querySelectorAll('.vf-video-wrapper.loaded').forEach(function (activeWrapper) {
+          activeWrapper.classList.remove('loaded');
+          var oldVideo = activeWrapper.querySelector('.vf-video-element');
+          if (oldVideo) { oldVideo.remove(); }
+        });
+
+        wrapper.classList.add('loaded');
+        var videoSrc = wrapper.getAttribute('data-video-src');
+        var video = document.createElement('video');
+        video.className = 'vf-video-element';
+        video.setAttribute('controls', 'true');
+        video.setAttribute('autoplay', 'true');
+        video.setAttribute('playsinline', 'true');
+        video.src = videoSrc;
+        wrapper.appendChild(video);
+      }
+
+      // Video Reels Mobile Slider JS
+      (function () {
+        var track = document.querySelector('.video-grid');
+        if (!track) return;
+
+        var cards = track.querySelectorAll('.vf-video-wrapper');
+
+        function updateActiveCard() {
+          if (window.innerWidth > 768) {
+            cards.forEach(function (card) { card.classList.remove('card-inactive'); });
+            return;
+          }
+          var trackCenter = track.scrollLeft + track.offsetWidth / 2;
+          var bestIdx = 0, bestDist = Infinity;
+          cards.forEach(function (card, i) {
+            var cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            var dist = Math.abs(cardCenter - trackCenter);
+            if (dist < bestDist) { bestDist = dist; bestIdx = i; }
+          });
+          cards.forEach(function (card, i) {
+            card.classList.toggle('card-inactive', i !== bestIdx);
+          });
+        }
+
+        track.addEventListener('scroll', updateActiveCard, { passive: true });
+        window.addEventListener('resize', updateActiveCard, { passive: true });
+        // Initial state
+        updateActiveCard();
+      })();
+    </script>
+  </section>
+
+  <!-- Section 9: Client Testimonials (Worn With Pride) -->
+  <section class="testimonial-section" id="testimonials"
+    style="border-top: 1px solid var(--color-border-dark); position: relative;">
+    <div class="testimonial-sticky-viewport">
+      <div class="container">
+        <div style="max-width: 680px; margin: 0 auto 20px auto; text-align: center;">
+          <span class="section-label" style="color: var(--color-brass);">Client Experiences</span>
+          <h2 class="rhett-story-title" style="margin-bottom: var(--space-xs);">Worn With Pride.</h2>
+          <p class="rhett-bio" style="font-size: var(--text-sm); color: rgba(255, 255, 255, 0.65); margin-bottom: 0;">
+            Real words from people who trusted the rebuild.</p>
+        </div>
+
+        <div class="client-testimonials-stack-wrap">
+
+          <!-- Testimonial 1 -->
+          <div class="client-testimonial-card">
+            <svg class="client-quote-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M9 13C9 10.239 11.239 8 14 8H15V11H14C12.895 11 12 11.895 12 13V14H15V20H9V13ZM19 13C19 10.239 21.239 8 24 8H25V11H24C22.895 11 22 11.895 22 13V14H25V20H19V13Z"
+                fill="currentColor" />
+            </svg>
+            <p class="client-testimonial-text">"After a rushed decision in my 20s, I hated my arm. Two other artists
+              said I needed heavy laser or a solid black block to fix it. Felipe completely redesigned the flow. Now,
+              it's a piece of art I show off."</p>
+            <div class="client-testimonial-footer">
+              <span class="client-testimonial-author">James O.</span>
+              <span class="client-testimonial-location">Dublin</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="client-testimonial-card">
+            <svg class="client-quote-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M9 13C9 10.239 11.239 8 14 8H15V11H14C12.895 11 12 11.895 12 13V14H15V20H9V13ZM19 13C19 10.239 21.239 8 24 8H25V11H24C22.895 11 22 11.895 22 13V14H25V20H19V13Z"
+                fill="currentColor" />
+            </svg>
+            <p class="client-testimonial-text">"The 3D concept blew my mind. Seeing how the new design would wrap around
+              my existing mistakes and turn into a full sleeve gave me so much confidence to proceed."</p>
+            <div class="client-testimonial-footer">
+              <span class="client-testimonial-author">Sarah L.</span>
+              <span class="client-testimonial-location">Dublin</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="client-testimonial-card">
+            <svg class="client-quote-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M9 13C9 10.239 11.239 8 14 8H15V11H14C12.895 11 12 11.895 12 13V14H15V20H9V13ZM19 13C19 10.239 21.239 8 24 8H25V11H24C22.895 11 22 11.895 22 13V14H25V20H19V13Z"
+                fill="currentColor" />
+            </svg>
+            <p class="client-testimonial-text">"The strategic layering is wonderful. The outline silhouette and 3D
+              balance are amazing — every detail was considered before a single line was placed."</p>
+            <div class="client-testimonial-footer">
+              <span class="client-testimonial-author">Clara M.</span>
+              <span class="client-testimonial-location">Dublin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Section 10: FAQ & Aftercare Section -->
+  <section class="section-padding" id="faq"
+    style="background-color: var(--color-sand); border-top: 1px solid var(--color-border); position: relative;">
+    <!-- Abstract dimension markings -->
+    <div
+      style="position: absolute; top: var(--space-md); right: var(--space-md); font-family: monospace; font-size: 8px; color: rgba(255,255,255,0.03); pointer-events: none;">
+      FAQ_REF_GRID // SHK-09-A
+    </div>
+
+    <div class="container">
+      <div class="faq-aftercare-grid">
+
+        <!-- Left Column: FAQ -->
+        <div class="faq-column">
+          <span class="section-label">Questions?</span>
+          <h2 class="rhett-story-title" style="margin-bottom: var(--space-md);">Questions?<br>We've Got You.</h2>
+
+          <div class="faq-accordion"
+            style="margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-sm);">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false"
+                style="color: var(--color-ink); display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                How much does a tattoo cost?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-content-inner" style="color: rgba(255,255,255,0.7); margin-top: 5px;">
+                  Every piece is custom. Pricing depends on size, detail, and placement. Cover-up realism starts from
+                  €200.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false"
+                style="color: var(--color-ink); display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                Do I need an appointment?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-content-inner" style="color: rgba(255,255,255,0.7); margin-top: 5px;">
+                  Yes. Our Dublin studio is strictly appointment-only. Every session begins with a design consultation.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false"
+                style="color: var(--color-ink); display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                Can I bring my own design?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-content-inner" style="color: rgba(255,255,255,0.7); margin-top: 5px;">
+                  Absolutely. We can take your concepts and sketch them together with Felipe to make them completely
+                  custom and unique.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false"
+                style="color: var(--color-ink); display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                How much is the booking deposit?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-content-inner" style="color: rgba(255,255,255,0.7); margin-top: 5px;">
+                  A €20 consultation deposit secures your appointment and is deducted from your final tattoo project or
+                  refunded on the day of consultation.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Aftercare -->
+        <div class="aftercare-column">
+          <span class="section-label">Aftercare Guidelines</span>
+          <h2 class="rhett-story-title" style="margin-bottom: var(--space-xs);">Your Tattoo Journey Doesn't End Here.
+          </h2>
+          <p class="rhett-bio"
+            style="font-size: var(--text-sm); margin-bottom: var(--space-md); color: rgba(255, 255, 255, 0.75);">
+            Great tattoos deserve great healing. We'll guide you through every step so your artwork heals beautifully.
+          </p>
+
+          <ul class="aftercare-includes-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brass)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Healing Timeline</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brass)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Aftercare Instructions</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brass)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Recommended Products</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brass)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>WhatsApp Support</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 12: Final CTA (Spotlight version) -->
+  <section class="section-padding" id="final-cta">
+    <div class="container" style="max-width: 600px; text-align: center; position: relative; z-index: 2; margin: 0 auto !important; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <h2 class="rhett-story-title" style="color: var(--color-ink); font-size: var(--text-xxl); margin-bottom: var(--space-xs); line-height: 1.1; text-align: center;">
+        Ready To Upgrade Your Tattoo?
+      </h2>
+      <p class="rhett-bio" style="color: rgba(255, 255, 255, 0.75); font-size: var(--text-base); margin-bottom: var(--space-md); margin-left: auto; margin-right: auto; max-width: 480px; text-align: center;">
+        Only a limited number of sleeve transformations are accepted each month. Secure your session today.
+      </p>
+
+      <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; width: 100%;">
+        <a href="#booking" class="btn btn-founder-glass btn-cta-compact">Book Consultation</a>
+        <a href="https://wa.me/353831757502?text=Hello!%20I'm%20looking%20to%20get%20a%20new%20tattoo,%20how%20can%20I%20get%20a%20quote?"
+          target="_blank" class="btn btn-founder-glass-dark btn-cta-compact">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="position: relative; overflow: hidden;">
+    <!-- Huge background outline branding watermark -->
+    <svg viewBox="0 0 160 160" width="550" height="550" xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; bottom: -50px; right: -50px; fill: none; stroke: rgba(255,255,255,0.015); stroke-width: 1.5; pointer-events: none;">
+      <g transform="translate(30, 64) scale(0.33)">
+        <path d="M15,10 L60,10 L60,35 L40,35 L40,45 L60,45 L60,70 L15,70 L15,45 L35,45 L35,35 L15,35 Z" />
+        <path d="M75,0 L95,0 L95,30 L125,30 L125,70 L105,70 L105,50 L95,50 L95,70 L75,70 Z" />
+        <rect x="135" y="25" width="20" height="45" />
+        <path d="M145,5 L155,12 L145,19 L135,12 Z" />
+        <path d="M155,30 L215,30 L215,70 L195,70 L195,50 L175,50 L175,70 L155,70 Z" />
+        <path d="M225,0 L245,0 L245,35 L265,15 L285,15 L255,45 L285,70 L265,70 L245,45 L245,70 L225,70 Z" />
+      </g>
+    </svg>
+
+    <div class="container footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <!-- Official Logo image kept in its original form -->
+        <div class="footer-logo-wrap" style="height: 70px; margin-bottom: var(--space-sm); display: inline-block;">
+          <img src="./logo.png" alt="Felipe Santos Logo" style="height: 100%; width: auto; object-fit: contain;" />
+        </div>
+        <h4
+          style="font-family: var(--font-serif); font-size: var(--text-md); text-transform: uppercase; color: var(--color-taupe); letter-spacing: 0.1em; margin-top: var(--space-sm);">
+          BLACK & GREY REALISM</h4>
+      </div>
+
+      <!-- Studio Info Column -->
+      <div class="footer-nav-col">
+        <h4>Felipe Santos</h4>
+        <ul>
+          <li>Dublin, Ireland</li>
+          <li
+            style="color: rgba(255, 255, 255, 0.6); font-size: var(--text-xs); line-height: 1.5; margin-top: var(--space-xs);">
+            Specialist in black & grey cover-ups and large-scale sleeve transformations.</li>
+        </ul>
+      </div>
+
+      <!-- Socials / Quick Links -->
+      <div class="footer-nav-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://felipetattooartist.com/" target="_blank">Website</a></li>
+          <li><a href="https://wa.me/353831757502" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:info@felipetattooartist.com">Email</a></li>
+          <li><a href="#booking">Book Consultation</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Felipe Santos. All Rights Reserved.</span>
+      <span>Designed by <a href="https://www.instagram.com/animal_aditya/" target="_blank"
+          style="text-decoration: underline; color: inherit; transition: opacity 0.3s;"
+          onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Aditya Dadhich</a></span>
+    </div>
+  </footer>
+
+  <!-- Script Modules -->
+  <script type="module" src="src/js/main.js"></script>
+  <script type="module" src="src/js/portfolio.js"></script>
+  <script type="module" src="src/js/booking.js"></script>
+
+
+  <!-- Craft Carousel: mobile dot sync + depth effect -->
+  <script>
+    (function () {
+      var track = document.getElementById('craft-carousel-track');
+      var dots = document.querySelectorAll('.craft-dot');
+      var cards = track ? track.querySelectorAll('.craft-snap-card') : [];
+
+      if (!track || !dots.length || !cards.length) return;
+
+      // Dot tap → scroll that card to center
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          var idx = parseInt(dot.getAttribute('data-index'));
+          var card = cards[idx];
+          if (!card) return;
+          // Manually scroll so the card center = track center
+          var trackW = track.offsetWidth;
+          var cardW = card.offsetWidth;
+          var cardLeft = card.offsetLeft;
+          track.scrollTo({
+            left: cardLeft - (trackW / 2) + (cardW / 2),
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Find which card is closest to center of the track viewport
+      function getActiveIndex() {
+        var trackCenter = track.scrollLeft + track.offsetWidth / 2;
+        var bestIdx = 0, bestDist = Infinity;
+        cards.forEach(function (card, i) {
+          var cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          var dist = Math.abs(cardCenter - trackCenter);
+          if (dist < bestDist) { bestDist = dist; bestIdx = i; }
+        });
+        return bestIdx;
+      }
+
+      function update() {
+        var active = getActiveIndex();
+        dots.forEach(function (dot, i) { dot.classList.toggle('active', i === active); });
+        cards.forEach(function (card, i) { card.classList.toggle('card-inactive', i !== active); });
+      }
+
+      track.addEventListener('scroll', update, { passive: true });
+      // Initial state
+      update();
+    })();
+  </script>
+
+  <!-- Process Line Animation -->
+  <script>
+    (function () {
+      var wrap = document.getElementById('process-line-wrap');
+      if (!wrap) return;
+
+      var steps = wrap.querySelectorAll('.process-line-step');
+      var arrows = wrap.querySelectorAll('.process-line-arrow');
+
+      var appeared = false;
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !appeared) {
+            appeared = true;
+
+            // Animate steps and arrows sequentially
+            var delay = 0;
+            steps.forEach(function (step, idx) {
+              setTimeout(function () {
+                step.classList.add('visible');
+              }, delay);
+
+              var nextArrow = arrows[idx];
+              if (nextArrow) {
+                setTimeout(function () {
+                  nextArrow.classList.add('visible');
+                }, delay + 30);
+              }
+
+              delay += 50;
+            });
+          }
+        });
+      }, { threshold: 0.15 });
+
+      obs.observe(wrap);
+    })();
+  </script>
+</body>
+
+</html>
