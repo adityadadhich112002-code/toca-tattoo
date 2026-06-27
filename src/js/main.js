@@ -464,8 +464,9 @@ function initTestimonialStack() {
           rotation: state.rotation,
           opacity: state.opacity,
           zIndex: state.zIndex,
-          duration: 0.45,
-          ease: "power2.out"
+          duration: 0.6,
+          ease: "power3.out",
+          force3D: true
         });
       });
     }
@@ -507,8 +508,9 @@ function initTestimonialStack() {
             x: direction * window.innerWidth * 0.9,
             rotation: direction * 10,
             opacity: 0,
-            duration: 0.3,
-            ease: "power2.in",
+            duration: 0.45,
+            ease: "power3.in",
+            force3D: true,
             onComplete: () => {
               deck = deck.filter(c => c !== card);
               deck.push(card);
@@ -524,8 +526,9 @@ function initTestimonialStack() {
             x: 0,
             rotation: 0,
             opacity: 1,
-            duration: 0.35,
-            ease: "back.out(1.5)"
+            duration: 0.5,
+            ease: "elastic.out(1, 0.5)",
+            force3D: true
           });
         }
         currentX = 0;

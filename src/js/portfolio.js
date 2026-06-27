@@ -275,6 +275,24 @@ function initPortfolioModal() {
     });
   });
 
+  // Prevent scroll propagation from modal to body
+  const modalContainer = document.querySelector('.modal-container');
+  if (modalContainer) {
+    modalContainer.addEventListener('wheel', (e) => {
+      e.stopPropagation();
+    }, { passive: false });
+    modalContainer.addEventListener('touchmove', (e) => {
+      e.stopPropagation();
+    }, { passive: false });
+  }
+
+  // Also prevent scroll on the modal backdrop from scrolling body
+  modal.addEventListener('wheel', (e) => {
+    if (e.target === modal) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
   // Close triggers
   const closeModal = () => {
     gsap.to('.modal-container', {
