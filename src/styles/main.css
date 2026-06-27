@@ -4424,6 +4424,16 @@ select {
   margin-top: var(--space-lg);
 }
 
+@media (max-width: 768px) {
+  .transformations-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .transformation-card {
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(16px);
